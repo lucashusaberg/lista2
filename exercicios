@@ -1,0 +1,145 @@
+
+import java.util.Scanner;
+
+public class Exercicio1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite uma palavra: ");
+        String palavra = scanner.nextLine();
+        int contagem = palavra.length();
+        System.out.println("A palavra '" + palavra + "' possui " + contagem + " letras.");
+    }
+}
+
+import java.util.Scanner;
+
+public class Exercicio2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite uma frase: ");
+        String frase = scanner.nextLine();
+        String fraseModificada = frase.replace('a', '*');
+        System.out.println("Frase modificada: " + fraseModificada);
+    }
+}
+
+import java.util.Scanner;
+
+public class Exercicio3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite uma palavra: ");
+        String palavra = scanner.nextLine();
+        String palavraInvertida = new StringBuilder(palavra).reverse().toString();
+        System.out.println("A palavra invertida é: " + palavraInvertida);
+    }
+}
+
+import java.util.Scanner;
+
+public class Exercicio4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite uma palavra: ");
+        String palavra = scanner.nextLine();
+        String palavraInvertida = new StringBuilder(palavra).reverse().toString();
+        
+        if (palavra.equals(palavraInvertida)) {
+            System.out.println("A palavra '" + palavra + "' é um palíndromo.");
+        } else {
+            System.out.println("A palavra '" + palavra + "' não é um palíndromo.");
+        }
+    }
+}
+
+import java.util.Scanner;
+
+public class Exercicio5 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite uma frase: ");
+        String frase = scanner.nextLine();
+        String[] palavras = frase.split("\\s+");
+        int contagem = palavras.length;
+        System.out.println("A frase contém " + contagem + " palavras.");
+    }
+}
+
+import java.util.Scanner;
+
+public class Exercicio6 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite seu nome completo: ");
+        String nomeCompleto = scanner.nextLine();
+        String[] palavras = nomeCompleto.split("\\s+");
+        StringBuilder nomeFormatado = new StringBuilder();
+
+        for (String palavra : palavras) {
+            nomeFormatado.append(Character.toUpperCase(palavra.charAt(0)))
+                          .append(palavra.substring(1).toLowerCase()).append(" ");
+        }
+
+        System.out.println("Nome formatado: " + nomeFormatado.toString().trim());
+    }
+}
+
+import java.util.Scanner;
+
+public class Exercicio7 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite seu endereço de email: ");
+        String email = scanner.nextLine();
+        String dominio = email.substring(email.indexOf('@') + 1);
+        System.out.println("O domínio do email é: " + dominio);
+    }
+}
+
+import java.util.Scanner;
+
+public class Exercicio8 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o número do seu cartão de crédito: ");
+        String cartao = scanner.nextLine();
+        String cartaoMascarado = "************" + cartao.substring(cartao.length() - 4);
+        System.out.println("Número do cartão mascarado: " + cartaoMascarado);
+    }
+}
+
+import java.util.Scanner;
+
+public class Exercicio9 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite uma frase com espaços extras: ");
+        String frase = scanner.nextLine().trim();
+        String fraseFormatada = frase.replaceAll("\\s+", " ");
+        System.out.println("Frase formatada: '" + fraseFormatada + "'");
+    }
+}
+
+import java.util.Scanner;
+
+public class Exercicio10 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite uma palavra: ");
+        String palavra = scanner.nextLine();
+        int contagemVogais = 0, contagemConsoantes = 0;
+        String vogais = "aeiouAEIOU";
+
+        for (char letra : palavra.toCharArray()) {
+            if (vogais.indexOf(letra) != -1) {
+                contagemVogais++;
+            } else if (Character.isLetter(letra)) {
+                contagemConsoantes++;
+            }
+        }
+
+        System.out.println("Vogais: " + contagemVogais + ", Consoantes: " + contagemConsoantes);
+    }
+}
+
+
